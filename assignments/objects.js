@@ -122,29 +122,40 @@ console.log(Ant.multiplyNums(3,4));
 // 3. Nest a grandchild object in the child object with properties for name and age.  The name will be Sam and the age will be 30
 // 4. Give each of the objects the ability to speak their names using the this keyword.
 
-// const parent = {
-//   "name": Susan,
-//   "age": 70,
+const parent = {
+  "name": "Susan",
+  "age": 70,
 
-//     const child = {
-//       "name": George,
-//       "age": 50,
-//     }//closes child
+    "child": {
+      "name": "George",
+      "age": 50,
+    
+      "grandchild": {
+        "name": "Sam",
+        "age": 30,
 
-//       const grandchild = {
-//         "name": Sam
-//         "age": 30,
-//       }//closes grandchild
-// }
+        speak: function(){
+          return "Hello there!"
+        }//closes speak function
+
+      }//closes grandchild
+    }//closes child
+}//closes parent
+
 
 // Log the parent object's name
+console.log(parent.child);
 
 // Log the child's age
+console.log(parent.child.age);
 
 // Log the name and age of the grandchild
+console.log(parent.child.grandchild);
 
 // Have the parent speak
+// console.log(parent.speak());
 
 // Have the child speak
 
 // Have the grandchild speak
+console.log(parent.child.grandchild.speak());
